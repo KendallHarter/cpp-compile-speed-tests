@@ -16,6 +16,6 @@ for kind in "lambda" "struct"; do
    for i in "$@"; do
       echo
       echo "> ${kind} $i"
-      time python3 ./gen.py $i ${kind} | ${CXX} -x c++ -o /dev/null -
+      time python3 ./gen.py $i ${kind} | ${CXX} -std=c++17 -x c++ -o /dev/null -
    done
 done
